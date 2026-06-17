@@ -5,17 +5,12 @@ Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizab
 Topics covered
 By the end of this lab, you will be able to:
 
-Launch a web server with termination protection enabled
-
-Monitor Your EC2 instance
-
-Modify the security group that your web server is using to allow HTTP access
-
-Resize your Amazon EC2 instance to scale
-
-Test termination protection
-
-Terminate your EC2 instance
+- Launch a web server with termination protection enabled
+- Monitor Your EC2 instance
+- Modify the security group that your web server is using to allow HTTP access
+- Resize your Amazon EC2 instance to scale
+- Test termination protection
+- Terminate your EC2 instance
 
 Step 1: Naming your EC2 instance
 When you name your instance, AWS creates a key value pair. The key for this pair is Name, and the value is the name you enter for your EC2 instance.
