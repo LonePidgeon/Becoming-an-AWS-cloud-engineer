@@ -46,6 +46,9 @@ An AMI provides the information required to launch an instance, which is a virtu
 
 6. Under AMI Machine Image (AMI), notice that the Amazon Linux 2023* image is selected by default. Keep this setting.
 
+   <img width="874" height="440" alt="image" src="https://github.com/user-attachments/assets/3c3bb8a6-0285-4d35-b86a-833d39d75266" />
+
+
 **Step 3: Choosing an instance type**
 Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and gives the flexibility to choose the appropriate mix of resources for applications. Each instance type includes one or more instance sizes so that can scale resources to the requirements of target workload.
 
@@ -67,6 +70,9 @@ The VPC indicates which virtual private cloud (VPC) you want to launch the insta
 11. Security group name - required: Web Server security group
 
 12. Description: Security group for my web server
+
+<img width="859" height="448" alt="image" src="https://github.com/user-attachments/assets/0c33ed95-0e5e-4592-8dc8-5cfbb186ccba" />
+
 
 A security group acts as a virtual firewall that controls the traffic for one or more instances. When you launch an instance, you associate one or more security groups with the instance. You add rules to each security group that allow traffic to or from its associated instances. You can modify the rules for a security group at any time; the new rules are automatically applied to all instances that are associated with the security group.
 
@@ -101,6 +107,9 @@ The script does the following:
 - Configure the web server to automatically start on boot
 - Activate the Web server
 - Create a simple web page
+
+  <img width="629" height="451" alt="image" src="https://github.com/user-attachments/assets/1451d522-24a3-4cfc-a3fe-c617ce766bc2" />
+
 
 **Step 7: Launching an EC2 instance**
 Now that you have configured the EC2 instance settings, you launch the instance.
@@ -147,8 +156,8 @@ The security group currently has no rules.
 29. Return to the web server tab that you previously opened and refresh  the page.
 You should see the message Hello From Your Web Server!
 
-**Task 4: Resize Your Instance: Instance Type and EBS Volume**
-As your needs change, you might find that your instance is over-utilized (too small) or under-utilized (too large). If so, you can change the instance type. For example, if a t3.micro instance is too small for its workload, you can change it to an m5.medium instance. Similarly, you can change the size of a disk.
+**Task 3: Resize Your Instance: Instance Type**
+As your needs change, you might find that your instance is over-utilized (too small) or under-utilized (too large). If so, you can change the instance type. For example, if a t3.micro instance is too small for its workload, you can change it to an m5.medium instance. 
 
 **Stop Your Instance**
 Before you can resize an instance, you must stop it.
@@ -166,3 +175,35 @@ Before you can resize an instance, you must stop it.
 Your instance will perform a normal shutdown and then will stop running.
 
 34. Wait for the Instance State to display: stopped
+
+**Change The Instance Type**
+35. In the Actions  menu, select Instance Settings  Change Instance Type, then configure:
+
+- Instance Type: t3.small
+- Choose Change instance type
+
+**Start the Resized Instance**
+You will now start the instance again, which will now have more memory and more disk space.
+
+36. In left navigation pane, select Instances.
+
+37. Select the Web Server instance by checking the box, then navigate to Instance state > Start instance.
+
+**Task 4: Test Termination Protection**
+You can delete your instance when you no longer need it. This is referred to as terminating your instance. You cannot connect to or restart an instance after it has been terminated.
+
+In this task, you will learn how to use termination protection.
+
+38. In left navigation pane, select Instances.
+
+39. Select the Web Server instance by checking the box and navigate to the top and select Instance state  menu, select  Terminate (delete) instance.
+
+40. In the Actions  menu, select Instance settings  Change termination protection.
+
+41. Uncheck  Enable followed by Save
+
+42. You can now terminate the instance.
+
+43. In the Actions  menu, select Instance State  Terminate instance.
+
+44. Select Terminate
