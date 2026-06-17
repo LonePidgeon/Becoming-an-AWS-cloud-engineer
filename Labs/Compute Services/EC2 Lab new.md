@@ -77,7 +77,7 @@ Launch the EC2 instance using a default 8 GiB disk volume. This is your root vol
 
 13. In the Configure storage pane, keep the default storage configuration.
 
-**Step 7: Configuring advanced details** 
+**Step 6: Configuring advanced details** 
 
 14. Expand the Advanced details pane.
 
@@ -87,24 +87,21 @@ Launch the EC2 instance using a default 8 GiB disk volume. This is your root vol
 
 17. Copy the following commands, and paste them into the User data text box.
 
-#!/bin/bash
+"#!/bin/bash
 yum -y install httpd
 systemctl enable httpd
 systemctl start httpd
-echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html
+echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html"
 
 The script does the following:
 
-Install an Apache web server (httpd)
+- Install an Apache web server (httpd)
+- Configure the web server to automatically start on boot
+- Activate the Web server
+- Create a simple web page
 
-Configure the web server to automatically start on boot
-
-Activate the Web server
-
-Create a simple web page
-
-Step 8: Launching an EC2 instance
-Now that you have configured your EC2 instance settings, it is time to launch your instance.
+**Step 7: Launching an EC2 instance**
+Now that you have configured the EC2 instance settings, it is time to launch the instance.
 
 In the right pane, choose Launch instance
 
