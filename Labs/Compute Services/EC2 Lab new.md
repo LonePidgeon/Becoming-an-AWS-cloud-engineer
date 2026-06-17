@@ -103,26 +103,66 @@ The script does the following:
 - Create a simple web page
 
 **Step 7: Launching an EC2 instance**
-Now that you have configured the EC2 instance settings, it is time to launch the instance.
+Now that you have configured the EC2 instance settings, you launch the instance.
 
-In the right pane, choose Launch instance
+18. In the right pane, choose Launch instance
 
-Choose View all instances
-
-The instance appears in a Pending state, which means it is being launched. It then changes to Running, which indicates that the instance has started booting. There will be a short time before you can access the instance.
+19. Choose View all instances
 
 The instance receives a public DNS name that you can use to contact the instance from the Internet.
 
-Select the  box next to your Web Server. The Details tab displays detailed information about your instance.
+Select the  box next to your Web Server. The Details tab displays detailed information about your instance. To view more information in the Details tab, drag the window divider upward.
 
- To view more information in the Details tab, drag the window divider upward.
+**Task 2: Update Your Security Group and Access the Web Server**
 
-Review the information displayed in the Details, Security and Networking tabs.
+When you launched the EC2 instance, you provided a script that installed a web server and created a simple web page. In this task, you will access content from the web server.
 
-Wait for your instance to display the following:
+20. Select the instance by checking the box and select the Details tab.
 
-Note: Refresh if needed.
+21. Copy the Public IPv4 address of your instance to your clipboard.
 
-Instance State:  Running
+22. Open a new tab in your web browser, paste the IP address you just copied, then press Enter.
 
-Status Checks:   2/2 checks passed
+**Question:** Are you able to access your web server? Why not?
+
+You are not currently able to access your web server because the security group is not permitting inbound traffic on port 80, which is used for HTTP web requests. This is a demonstration of using a security group as a firewall to restrict the network traffic that is allowed in and out of an instance.
+
+To correct this, you will now update the security group to permit web traffic on port 80.
+
+23. Keep the browser tab open, but return to the EC2 Management Console tab.
+
+24. In the left navigation pane, select Security Groups located under Network & Security.
+
+25. Select  Web Server security group.
+
+26. Select the Inbound rules tab.
+The security group currently has no rules.
+
+28. Select Edit inbound rules then select Add rule and configure the rule with the following settings:
+
+- Type: HTTP
+- Source: Anywhere-IPv4
+- Select Save rules
+
+29. Return to the web server tab that you previously opened and refresh  the page.
+You should see the message Hello From Your Web Server!
+
+**Task 4: Resize Your Instance: Instance Type and EBS Volume**
+As your needs change, you might find that your instance is over-utilized (too small) or under-utilized (too large). If so, you can change the instance type. For example, if a t3.micro instance is too small for its workload, you can change it to an m5.medium instance. Similarly, you can change the size of a disk.
+
+**Stop Your Instance**
+Before you can resize an instance, you must stop it.
+
+ When you stop an instance, it is shut down. There is no charge for a stopped EC2 instance, but the storage charge for attached Amazon EBS volumes remains.
+
+30. On the EC2 Management Console, in the left navigation pane, select Instances.
+
+ Web Server should already be selected.
+
+31. Select Instance state > Stop instance.
+
+33. Select Stop
+
+Your instance will perform a normal shutdown and then will stop running.
+
+34. Wait for the Instance State to display: stopped
