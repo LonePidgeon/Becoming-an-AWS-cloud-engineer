@@ -13,9 +13,9 @@ Amazon EC2 changes the economics of computing by allowing you to pay only for ca
 **Topics covered**
 
 - Launch a web server with termination protection enabled
-- Monitor my EC2 instance
+- Monitor an EC2 instance
 - Modify the security group that my web server is using to allow HTTP access
-- Resize my Amazon EC2 instance to scale
+- Resize an Amazon EC2 instance to scale
 - Test termination protection
 - Terminate my EC2 instance
 
@@ -53,7 +53,7 @@ Select a t3.micro instance. This instance type has 2 virtual CPU and 1 GiB of me
 
 7. From the dropdown, select t3.micro.
 
-Step 4: Configuring the network settings 
+**Step 4: Configuring the network settings** 
 This pane is used to configure networking settings.
 
 The VPC indicates which virtual private cloud (VPC) you want to launch the instance into. You can have multiple VPCs, including different ones for development, testing, and production.
@@ -70,14 +70,22 @@ The VPC indicates which virtual private cloud (VPC) you want to launch the insta
 
 A security group acts as a virtual firewall that controls the traffic for one or more instances. When you launch an instance, you associate one or more security groups with the instance. You add rules to each security group that allow traffic to or from its associated instances. You can modify the rules for a security group at any time; the new rules are automatically applied to all instances that are associated with the security group.
 
+**Step 5: Adding storage**
+Amazon EC2 stores data on a network-attached virtual disk called Amazon Elastic Block Store (Amazon EBS).
+
+Launch the EC2 instance using a default 8 GiB disk volume. This is your root volume (also known as a boot volume).
+
+13. In the Configure storage pane, keep the default storage configuration.
+
 **Step 7: Configuring advanced details** 
-Expand the Advanced details pane.
 
-Select the dropdown for Termination protection, then choose Enable.
+14. Expand the Advanced details pane.
 
-When you launch an instance in Amazon EC2, you have the option of passing user data to the instance. These commands can be used to perform common automated configuration tasks and even run scripts after the instance starts. 
+15. Select the dropdown for Termination protection, then choose Enable.
 
-Copy the following commands, and paste them into the User data text box.
+16. When you launch an instance in Amazon EC2, you have the option of passing user data to the instance. These commands can be used to perform common automated configuration tasks and even run scripts after the instance starts. 
+
+17. Copy the following commands, and paste them into the User data text box.
 
 #!/bin/bash
 yum -y install httpd
