@@ -130,11 +130,17 @@ When you launched the EC2 instance, you provided a script that installed a web s
 
 21. Copy the Public IPv4 address of your instance to your clipboard.
 
-22. Open a new tab in your web browser, paste the IP address you just copied, then press Enter.
+    <img width="1115" height="377" alt="image" src="https://github.com/user-attachments/assets/36772b14-8c60-459b-b692-22deccdd2362" />
+
+
+23. Open a new tab in your web browser, paste the IP address you just copied, then press Enter.
 
 **Question:** Are you able to access your web server? Why not?
 
 You are not currently able to access your web server because the security group is not permitting inbound traffic on port 80, which is used for HTTP web requests. This is a demonstration of using a security group as a firewall to restrict the network traffic that is allowed in and out of an instance.
+
+<img width="1146" height="637" alt="image" src="https://github.com/user-attachments/assets/3df27aed-18e3-485e-8296-2386eb0d9d1f" />
+
 
 To correct this, you will now update the security group to permit web traffic on port 80.
 
@@ -147,11 +153,15 @@ To correct this, you will now update the security group to permit web traffic on
 26. Select the Inbound rules tab.
 The security group currently has no rules.
 
+<img width="1108" height="443" alt="image" src="https://github.com/user-attachments/assets/64ffba0d-55c6-4251-a58b-8d0ee51d52a7" />
+
+
 28. Select Edit inbound rules then select Add rule and configure the rule with the following settings:
 
 - Type: HTTP
 - Source: Anywhere-IPv4
 - Select Save rules
+<img width="1304" height="374" alt="image" src="https://github.com/user-attachments/assets/9f845be3-0bce-43e3-a286-b6080c6ba4a2" />
 
 29. Return to the web server tab that you previously opened and refresh  the page.
 You should see the message Hello From Your Web Server!
@@ -181,6 +191,8 @@ Your instance will perform a normal shutdown and then will stop running.
 
 - Instance Type: t3.small
 - Choose Change instance type
+<img width="1006" height="595" alt="image" src="https://github.com/user-attachments/assets/28fcd631-ad3a-4664-ab3c-66eefb15c0ea" />
+
 
 **Start the Resized Instance**
 You will now start the instance again, which will now have more memory and more disk space.
@@ -202,8 +214,14 @@ In this task, you will learn how to use termination protection.
 
 41. Uncheck  Enable followed by Save
 
-42. You can now terminate the instance.
+   <img width="1147" height="451" alt="image" src="https://github.com/user-attachments/assets/1be13a8e-39b6-4d4d-a0da-56f776308d70" />
 
-43. In the Actions  menu, select Instance State  Terminate instance.
 
-44. Select Terminate
+43. You can now terminate the instance.
+
+44. In the Actions  menu, select Instance State  Terminate instance.
+
+45. Select Terminate
+
+    <img width="1141" height="457" alt="image" src="https://github.com/user-attachments/assets/adb47cf0-c43d-4cd2-aab5-12ce2b6b5994" />
+
