@@ -1,7 +1,6 @@
  **Overview**
 
-    <img width="421" height="335" alt="image" src="https://github.com/user-attachments/assets/bce1319c-7644-4a0f-8c4e-228a6edce231" />
-
+<img width="421" height="335" alt="image" src="https://github.com/user-attachments/assets/bce1319c-7644-4a0f-8c4e-228a6edce231" />
 
 This lab provides you with a basic overview of launching, resizing, managing, and monitoring an Amazon EC2 instance.
 
