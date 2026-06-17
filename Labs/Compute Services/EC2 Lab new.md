@@ -2,7 +2,7 @@
 
 <img width="421" height="335" alt="image" src="https://github.com/user-attachments/assets/bce1319c-7644-4a0f-8c4e-228a6edce231" />
 
-This lab provides you with a basic overview of launching, resizing, managing, and monitoring an Amazon EC2 instance.
+This lab provided me with a basic overview of launching, resizing, managing, and monitoring an Amazon EC2 instance.
 
 Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
 
@@ -10,68 +10,67 @@ Amazon EC2's simple web service interface allows you to obtain and configure cap
 
 Amazon EC2 changes the economics of computing by allowing you to pay only for capacity that you actually use. Amazon EC2 provides developers the tools to build failure resilient applications and isolate themselves from common failure scenarios.
 
-Topics covered
-By the end of this lab, you will be able to:
+**Topics covered**
 
 - Launch a web server with termination protection enabled
-- Monitor Your EC2 instance
-- Modify the security group that your web server is using to allow HTTP access
-- Resize your Amazon EC2 instance to scale
+- Monitor my EC2 instance
+- Modify the security group that my web server is using to allow HTTP access
+- Resize my Amazon EC2 instance to scale
 - Test termination protection
-- Terminate your EC2 instance
+- Terminate my EC2 instance
 
-Step 1: Naming your EC2 instance
+**Task 1: Launching your EC2 instance**
+In this task, I will launch an Amazon EC2 instance with termination protection. Termination protection prevents me from accidentally terminating an EC2 instance. I will deploy my instance with a User Data script that will allow me to deploy a simple web server.
+
+1. In the AWS Management Console on the Services menu, choose EC2.
+
+2. In the left navigation pane, choose EC2 Dashboard to ensure that you are on the dashboard page.
+
+3. Choose Launch instance, and then select Launch instance.
+
+**Step 1: Naming your EC2 instance**
 When you name your instance, AWS creates a key value pair. The key for this pair is Name, and the value is the name you enter for your EC2 instance.
 
-Step 2: Choosing an Amazon Machine Image (AMI)
+4. In the Name and tags pane, in the Name text box, enter "Web Server".
+
+**Step 2: Choosing an Amazon Machine Image (AMI)**
 An AMI provides the information required to launch an instance, which is a virtual server in the cloud. An AMI includes the following:
 
-A template for the root volume for the instance (for example, an operating system or an application server with applications)
+- A template for the root volume for the instance (for example, an operating system or an application server with applications)
 
-Launch permissions that control which AWS accounts can use the AMI to launch instances
+- Launch permissions that control which AWS accounts can use the AMI to launch instances
 
-A block device mapping that specifies the volumes to attach to the instance when it is launched
+- A block device mapping that specifies the volumes to attach to the instance when it is launched
 
-The Quick Start list contains the most commonly used AMIs. You can also create your own AMI or select an AMI from the AWS Marketplace, an online store where you can sell or buy software that runs on AWS.
+5. Locate the Application and OS Images (Amazon Machine Image) pane. 
 
-Locate the Application and OS Images (Amazon Machine Image) pane. 
+6. Under AMI Machine Image (AMI), notice that the Amazon Linux 2023* image is selected by default. Keep this setting.
 
-Under AMI Machine Image (AMI), notice that the Amazon Linux 2023* image is selected by default. Keep this setting.
-
-Step 3: Choosing an instance type
-Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and give you the flexibility to choose the appropriate mix of resources for your applications. Each instance type includes one or more instance sizes so that you can scale your resources to the requirements of your target workload.
+**Step 3: Choosing an instance type**
+Amazon EC2 provides a wide selection of instance types optimized to fit different use cases. Instance types comprise varying combinations of CPU, memory, storage, and networking capacity and gives the flexibility to choose the appropriate mix of resources for applications. Each instance type includes one or more instance sizes so that can scale resources to the requirements of target workload.
 
 Select a t3.micro instance. This instance type has 2 virtual CPU and 1 GiB of memory.
 
-From the dropdown, select t3.micro.
+7. From the dropdown, select t3.micro.
 
-NOTE: You may be restricted from using other instance types in this lab.
-
-Step 4: Configuring a key pair
-Amazon EC2 uses public–key cryptography to encrypt and decrypt login information. To log in to your instance, you must create a key pair, specify the name of the key pair when you launch the instance, and provide the private key when you connect to the instance.
-
-In this lab, you do not log in to your instance, so you do not require a key pair.
-
-In the Key pair (login) pane, select Proceed without a key pair (Not recommended).
-
-Step 5: Configuring the network settings 
-You use this pane to configure networking settings.
+Step 4: Configuring the network settings 
+This pane is used to configure networking settings.
 
 The VPC indicates which virtual private cloud (VPC) you want to launch the instance into. You can have multiple VPCs, including different ones for development, testing, and production.
 
-In the Network settings pane, choose Edit
+8. In the Network settings pane, choose Edit
 
-For VPC - required, select Lab VPC.
+9. For VPC - required, select Lab VPC.
 
-Still in the Network settings pane, configure the Security Group as follows:
+10. Still in the Network settings pane, configure the Security Group as follows:
 
-Security group name - required: Web Server security group
+11. Security group name - required: Web Server security group
 
-Description: Security group for my web server
+12. Description: Security group for my web server
 
 A security group acts as a virtual firewall that controls the traffic for one or more instances. When you launch an instance, you associate one or more security groups with the instance. You add rules to each security group that allow traffic to or from its associated instances. You can modify the rules for a security group at any time; the new rules are automatically applied to all instances that are associated with the security group.
 
-Step 7: Configuring advanced details 
+**Step 7: Configuring advanced details** 
 Expand the Advanced details pane.
 
 Select the dropdown for Termination protection, then choose Enable.
