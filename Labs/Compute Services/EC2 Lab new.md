@@ -91,7 +91,7 @@ Launch the EC2 instance using a default 8 GiB disk volume. This is your root vol
 yum -y install httpd
 systemctl enable httpd
 systemctl start httpd
-echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html
+echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html```
 
 The script does the following:
 
