@@ -8,4 +8,4 @@ After completing this lab, I will be able to:
 - Understand the purpose of the man command
 - Demonstrate the search feature of the man pages
 - Examine man page headers
-- use of command line
+- Use of command line
