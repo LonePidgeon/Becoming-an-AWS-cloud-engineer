@@ -1,4 +1,4 @@
-Overview
+**Overview**
 
 This lab provided me with a basic overview of launching, resizing, managing, and monitoring an Amazon EC2 instance.
 
@@ -8,7 +8,7 @@ Amazon EC2's simple web service interface allows you to obtain and configure cap
 
 Amazon EC2 changes the economics of computing by allowing you to pay only for capacity that you actually use. Amazon EC2 provides developers the tools to build failure resilient applications and isolate themselves from common failure scenarios.
 
-Topics covered
+**Topics covered:**
 
 - Launch a web server with termination protection enabled
 - Monitor an EC2 instance
