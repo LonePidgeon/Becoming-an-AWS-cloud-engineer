@@ -1,24 +1,32 @@
-# Becoming-an-AWS-cloud-engineer
-The Restart program is designed to take you from a beginner in tech to a confident,
-job-ready professional. During the program, I learned:
+# Becoming an AWS Cloud Engineer
 
-- Cloud Computing: Understanding AWS services, deploying applications, and
-managing infrastructure.
-- Programming & Scripting: Building logic with Python, automating tasks, and
-working with data.
-- Databases & Storage: Designing, creating, and querying relational and NoSQL
-databases.
-- Networking & Security: Basics of networking, VPNs, subnets, and security best pr
-actices.
-- Professional Skills: Git, GitHub, documentation, teamwork, and problem-solving.
+📚 A personal knowledge base and portfolio built while completing the **Restart program** — a hands-on path from tech beginner to job-ready cloud engineer.
 
-Restart teaches you not only how to use tools, but also why they matter in real-world IT
-environments. It encourages hands-on practice, building projects, and documenting your
-progress, so you can confidently demonstrate your skills to employers.
+## What I Learned
 
-Why This Repo?
-- Helps me document my knowledge, especially around AWS services and cloud
-concepts
-- Acts as a personal knowledge base I can revisit anytime.
-- Becomes a portfolio to showcase my labs, notes, and projects to recruiters.
-- Helps me improve professional writing and technical communication skills.
+- **Cloud Computing** — Deploying and managing infrastructure using core AWS services (EC2, S3, IAM, VPC, and more)
+- **Programming & Scripting** — Writing Python and Bash to automate tasks and manipulate data
+- **Databases & Storage** — Designing, building, and querying relational and NoSQL databases
+- **Networking & Security** — VPCs, subnets, VPNs, and security best practices
+- **Professional Skills** — Git & GitHub workflows, technical documentation, and collaborative problem-solving
+
+The program's focus isn't just *how* to use these tools — it's *why* they matter in real-world IT environments. Every concept here was reinforced through hands-on labs and projects.
+
+## Why This Repo Exists
+
+- 🧠 **Knowledge base** — a place to document and revisit what I've learned
+- 💼 **Portfolio** — labs, notes, and projects I can point recruiters to
+- ✍️ **Practice ground** — for sharpening technical writing and communication skills
+- 📈 **Progress tracker** — a visible record of how far I've come
+
+## Repo Structure
+
+| Folder | Contents |
+|---|---|
+| `Labs/` | Hands-on AWS labs (EC2, S3, IAM, etc.) |
+| `Labs Network/` | Networking-focused labs |
+| `Projects/` | Larger applied projects |
+| `Certification & Badges/` | Certificates earned along the way |
+
+---
+*Currently working toward achieving my AWS Cloud Practitioner certification*
